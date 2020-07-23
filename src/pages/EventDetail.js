@@ -32,13 +32,16 @@ const EventDetail = (props) => {
     }, []);
 
     const addTicket = () => {
+        setPrice(eventDetail.price*(ticket+1))
         setTicket(ticket + 1)
         if (ticket === 10) {
+            setPrice(price)
             setTicket(10)
         }
     }
 
     const minusTicket = () => {
+        setPrice(eventDetail.price*(ticket-1))
         setTicket(ticket - 1)
         if (ticket <= 0) {
             setTicket(0)
@@ -88,10 +91,7 @@ const EventDetail = (props) => {
 
                             <button className="btn sharp" onClick={() => dispatch({ type: "CART_UPDATE_FROM_LOCAL", payload: { event: eventDetail, count: ticket } })}>Add To Cart</button>
                         </div>
-                        <h3> Subtotal:</h3>
-
-                       
-
+                            <h3> Subtotal:{price} VND</h3>
                     </div>
 
                     <Col lg={12}>

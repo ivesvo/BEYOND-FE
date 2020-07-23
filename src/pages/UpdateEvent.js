@@ -70,7 +70,7 @@ const UpdateEvent = (props) => {
 
     return (
         <div>
-            <Navigationbar />
+          
             <div className="artistpage body">
                 <Row><h1 className="big" style={{ color: "#404040"}}>EDIT AN EVENT</h1></Row>
 

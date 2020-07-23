@@ -29,13 +29,14 @@ const Profile = () => {
 
 
                 </div>
-                <button className="tinytext" onClick={() => goout()}></button>
+                
                 <div>
                     {user.isAdmin
                         ? <div className="tinytext">ADMIN</div>
                         : <div className="tinytext">USER</div>
                     }
-                    <h1><i class="fal fa-sign-out 5x" ></i></h1>
+                   
+                    <button className="tinytext btn sharp" onClick={() => goout()}> <h5><i class="fal fa-sign-out 5x" ></i></h5></button>
                 </div>
 
 
