@@ -12,10 +12,11 @@ import axios from 'axios';
 export default function SigningUp() {
     const [email, setEmail] = useState("EMAIL")
     const [password, setPassword] = useState("✧✧✧✧✧✧✧✧")
+    const [name, setName] = useState("")
 
     const createUser  = async (e) =>{
         await axios.post(`${process.env.REACT_APP_URL}/users`,{
-            email: email, password: password
+            email: email, password: password, name:name
         })
     } 
     
@@ -65,6 +66,21 @@ export default function SigningUp() {
                                <Form.Text className="text-muted">
                                </Form.Text>
                            </Form.Group>
+
+                           <Form.Group controlId="formBasicPassword">
+                              
+                              <input
+                                  placeholder="name"
+                                  className="emailbar"
+                                  type="text"
+                                  value={name}
+                                  autoComplete="off"
+                                  onChange={(e) => setName(e.target.value)} />
+
+                           
+                              <Form.Text className="text-muted">
+                              </Form.Text>
+                          </Form.Group>
 
                             </div>
                            

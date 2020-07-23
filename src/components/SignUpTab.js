@@ -5,19 +5,21 @@ import axios from 'axios'
 export default function SignUpTab(){
     const [email,setEmail] = useState("")
     const [password,setPassword] = useState("")
+    const [name, setName] = useState("")
 
 
 
-    const createUser  = async (e) =>{
+    const createUser = async () =>{
         await axios.post(`${process.env.REACT_APP_URL}/users`,{
-            email: email, password: password
+            email: email, password: password, name:name
         })
+        console.log(email)
     } 
 
 
     return (
         <div>
-             
+        
             <Form>
                 <div className="d-flex login">
                 <div>
@@ -47,7 +49,21 @@ export default function SignUpTab(){
                         col="8"
                         type="password"
                         placeholder="Password"
-                        onChange={(e) => setPassword(e)} 
+                        onChange={(e) => setPassword(e.target.value)} 
+                        />
+                </Form.Group>
+
+                </div>
+                <div>
+                <Form.Group controlId="formBasicEmail">
+                    <Form.Label style={{margin:"20px"}} className="tinytext">NAME</Form.Label>
+                    <input
+                        className="searchbar"
+                        row="3"
+                        col="8"
+                        type="type"
+                        placeholder="Name"
+                        onChange={(e) => setName(e.target.value)} 
                         />
                 </Form.Group>
 
@@ -57,7 +73,7 @@ export default function SignUpTab(){
                 </div>
 
                 
-                <button className="btn sharp" onClick={createUser} >Sign Up</button>
+                <button className="btn sharp" onClick={createUser}>Sign Up</button>
             </Form>
         </div>
     )

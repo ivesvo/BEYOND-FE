@@ -12,7 +12,6 @@ const LandingPage = () => {
             <Pick/>
            <ShopNow/>
            <div className="lastpage">
-            
             <SigningUp/>
 
             <Footer/>

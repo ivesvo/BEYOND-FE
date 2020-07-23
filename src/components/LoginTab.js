@@ -13,10 +13,14 @@ export default function LoginTab() {
     const [userPassword, setUserPassword] = useState("");
 
     const loginABC = async (e) => {
+        
+        console.log(userEmail,userPassword)
+      
         e.preventDefault();
-        const res = await axios.post(`${process.env.REACT_APP_URL}/sauth/login`, { email: userEmail, password: userPassword }, {
+        const res = await axios.post(`${process.env.REACT_APP_URL}/auth/login`, { email: userEmail, password: userPassword }, {
             method: "POST"
         });
+        
         const { user, token } = res.data.data;
         console.log(user);
         localStorage.setItem("token", token);
