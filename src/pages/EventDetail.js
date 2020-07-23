@@ -24,7 +24,7 @@ const EventDetail = (props) => {
     useEffect(() => {
         dispatch({ type: "LOADING" })
         console.log("id is", eventId)
-        axios.get(`${process.env.REACT_APP_URL}/${eventId}`).then((res) => {
+        axios.get(`${process.env.REACT_APP_URL}/events/${eventId}`).then((res) => {
             console.log("single event data is", res.data)
             setEventDetail(res.data.data)
             dispatch({ type: "LOADED" })

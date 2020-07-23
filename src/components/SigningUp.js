@@ -11,10 +11,11 @@ import axios from 'axios';
 
 export default function SigningUp() {
     const [email, setEmail] = useState("EMAIL")
+    const [password, setPassword] = useState("✧✧✧✧✧✧✧✧")
 
     const createUser  = async (e) =>{
         await axios.post(`${process.env.REACT_APP_URL}/users`,{
-            email: email
+            email: email, password: password
         })
     } 
     
@@ -32,23 +33,45 @@ export default function SigningUp() {
                         If not you, then who?
                       
                         <h1 style={{ fontSize: "60px", fontWeight: "bolders", marginLeft:"-10px" }}>
+                            <div className="breadcrumbs">
                             <Form.Group controlId="formBasicEmail">
                                
-                                <input
-                                    placeholder="EMAIL"
-                                    className="emailbar"
-                                    type="text"
-                                    value={email}
-                                    autoComplete="off"
-                                    onChange={(e) => setEmail(e.target.value)} />
+                               
+                               <input
+                                   placeholder="EMAIL"
+                                   className="emailbar"
+                                   type="text"
+                                   value={email}
+                                   autoComplete="off"
+                                   onChange={(e) => setEmail(e.target.value)} />
 
-                             
-                                <Form.Text className="text-muted">
-                                </Form.Text>
-                            </Form.Group>
+                            
+                               <Form.Text className="text-muted">
+                               </Form.Text>
+                           </Form.Group>
+
+
+                           <Form.Group controlId="formBasicPassword">
+                              
+                               <input
+                                   placeholder="hiphopnevadie"
+                                   className="emailbar"
+                                   type="password"
+                                   value={password}
+                                   autoComplete="off"
+                                   onChange={(e) => setPassword(e.target.value)} />
+
+                            
+                               <Form.Text className="text-muted">
+                               </Form.Text>
+                           </Form.Group>
+
+                            </div>
+                           
+                       
                         </h1>
-                         
-                    
+
+                       
                        
                     </Col>
                     <Col md={2} xs={3} className="d-flex justify-content-end">

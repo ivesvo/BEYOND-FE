@@ -1,7 +1,20 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {Button,Form, FormControl} from 'react-bootstrap'
+import axios from 'axios'
 
-const SignUpTab = () => {
+export default function SignUpTab(){
+    const [email,setEmail] = useState("")
+    const [password,setPassword] = useState("")
+
+
+
+    const createUser  = async (e) =>{
+        await axios.post(`${process.env.REACT_APP_URL}/users`,{
+            email: email, password: password
+        })
+    } 
+
+
     return (
         <div>
              
@@ -16,7 +29,7 @@ const SignUpTab = () => {
                         col="8"
                         className="searchbar"
                         placeholder="Enter email"
-                        // onChange={(e) => handleEmailChange(e)} 
+                        onChange={(e) => setEmail(e.target.value)} 
                         />
 
                     <Form.Text className="text-muted">
@@ -34,7 +47,7 @@ const SignUpTab = () => {
                         col="8"
                         type="password"
                         placeholder="Password"
-                        // onChange={(e) => handlePasswordChange(e)} 
+                        onChange={(e) => setPassword(e)} 
                         />
                 </Form.Group>
 
@@ -44,10 +57,9 @@ const SignUpTab = () => {
                 </div>
 
                 
-                <button >Sign In</button>
+                <button className="btn sharp" onClick={createUser} >Sign Up</button>
             </Form>
         </div>
     )
 }
 
-export default SignUpTab
