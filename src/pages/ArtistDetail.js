@@ -15,7 +15,7 @@ const ArtistDetail = (props) => {
     const dispatch = useDispatch()
     useEffect(() => {
         dispatch({ type: "LOADING" })
-        axios.get(`${process.env.REACT_APP_URL}/artists/${title}`).then((res) => {
+        axios.get(`${process.env.REACT_APP_URL}artists/${title}`).then((res) => {
             console.log("single artist data is", res.data.data)
             setArtists(res.data.data)
             dispatch({ type: "LOADED" })

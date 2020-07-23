@@ -1,6 +1,6 @@
 
 const loginWithEmail = (email, password)=> async dispatch =>{
-    const res = await fetch(`${process.env.REACT_APP_URL}/auth/login`,{
+    const res = await fetch(`${process.env.REACT_APP_URL}auth/login`,{
         method: "POST",
         headers:{
             "content-type": "apoolication/json"

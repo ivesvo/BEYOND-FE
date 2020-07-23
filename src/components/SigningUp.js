@@ -14,7 +14,7 @@ export default function SigningUp() {
     const [password, setPassword] = useState("✧✧✧✧✧✧✧✧")
 
     const createUser  = async (e) =>{
-        await axios.post(`${process.env.REACT_APP_URL}/users`,{
+        await axios.post(`${process.env.REACT_APP_URL}users`,{
             email: email, password: password
         })
     } 

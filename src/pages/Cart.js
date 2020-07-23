@@ -18,7 +18,7 @@ const Cart = () => {
 
     const checkCart = async () => {
         const token = localStorage.getItem("token")
-        const res = await axios.get(`${process.env.REACT_APP_URL}/cart`, {
+        const res = await axios.get(`${process.env.REACT_APP_URL}cart`, {
             headers: {
                 authorization: `Bearer ${token}`
             }

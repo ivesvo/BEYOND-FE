@@ -49,7 +49,7 @@ const NewEvent = () => {
             minimumAge
         };
 
-        const newEvent = await fetch(`${process.env.REACT_APP_URL}/events`, {
+        const newEvent = await fetch(`${process.env.REACT_APP_URL}events`, {
             method: "POST",
             headers: {
                 authorization: `Bearer ${token}`,
