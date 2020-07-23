@@ -30,8 +30,27 @@ export default function SigningUp() {
                    If not you, then who?
                 </Row> */}
                 <Row className="email">
-                    <Col md={10} xs={6}>
-                        If not you, then who?
+                   
+                    <Col md={10} xs={2}>
+                        <div className="d-flex align-items-center">
+                        If not you, then
+                        
+                        <Form.Group controlId="formBasicPassword">
+                              
+                              <input
+                            
+                                  placeholder="who?"
+                                  className="emailbar"
+                                  type="text"
+                                  value={name}
+                                  autoComplete="off"
+                                  onChange={(e) => setName(e.target.value)} />
+
+                           
+                              <Form.Text className="text-muted">
+                              </Form.Text>
+                          </Form.Group>
+                          </div>
                       
                         <h1 style={{ fontSize: "60px", fontWeight: "bolders", marginLeft:"-10px" }}>
                             <div className="breadcrumbs">
@@ -66,21 +85,6 @@ export default function SigningUp() {
                                <Form.Text className="text-muted">
                                </Form.Text>
                            </Form.Group>
-
-                           <Form.Group controlId="formBasicPassword">
-                              
-                              <input
-                                  placeholder="name"
-                                  className="emailbar"
-                                  type="text"
-                                  value={name}
-                                  autoComplete="off"
-                                  onChange={(e) => setName(e.target.value)} />
-
-                           
-                              <Form.Text className="text-muted">
-                              </Form.Text>
-                          </Form.Group>
 
                             </div>
                            

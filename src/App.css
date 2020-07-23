@@ -244,7 +244,7 @@ ARTISTS PAGE */
 .artist-detail{
   margin-top:0px;
   background-color: black;
-  padding: 40px;
+  padding: 30px;
   color: white;
   font-family: 'Times Now';
   font-size: 30px;
@@ -366,4 +366,10 @@ a:hover{
 }
 .radioinfo{
   padding-top: 10px;
+}
+
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color:white;
+  opacity: 1; /* Firefox */
 }

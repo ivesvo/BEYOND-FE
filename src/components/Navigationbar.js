@@ -24,7 +24,7 @@ const Navigationbar = () => {
     <div className="fixed-top" style={{padding:"20px 40px"}}>
       <div className="d-flex justify-content-between">
            <div>
-              <Link to="/"><h2 style={{fontWeight: "bolder",textDecoration:"none"}}>BEYOND</h2></Link>
+              <Link to="/"><h2 style={{fontWeight: "bolder",textDecoration:"none", marginLeft:"5px"}}>BEYOND</h2></Link>
 
             </div>
              <div className="d-flex justify-content-end menu">

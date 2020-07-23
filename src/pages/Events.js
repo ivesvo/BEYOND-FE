@@ -146,6 +146,8 @@ const Event = ({ title, posterURL, city, date, _id }) => {
     return (
         <div style={{ maxWidth: '35rem' }} >
             <img
+                // width="300px"
+                // height="900px"
                 variant="top"
                 resizeMode='cover'
                 src={posterURL}
