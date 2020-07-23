@@ -30,8 +30,8 @@ const ArtistDetail = (props) => {
             <div class="fill">
                 <img src={artists.pictureURL} alt="Artist Image" />
             </div>
-            <div className="artist-title body">
-                <h1 style={{ fontSize: "120px" }}>{title}</h1>
+            <div className="body">
+                <h1 className="artist-title" style={{ fontSize: "120px" }}>{title}</h1>
                 <div>
                     <div>{artists.genres && artists.genres.map(item => <Badge style={{ marginLeft: "5px" }} variant="light">{item.genre.toUpperCase()}</Badge>)}</div>
                     <div><i class="fal fa-location"></i>{artists.city}</div>

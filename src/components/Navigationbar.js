@@ -54,9 +54,9 @@ const Navigationbar = () => {
       </Row>
 
       <Row className="breadcrumbs" style={{ margin: "5px"}}>
-        <Link to="/artists" style={{textDecoration:"none"}}><h2>ARTISTS</h2></Link>
-        <Link to="/explore" style={{textDecoration:"none"}}><h2>EXPLORE</h2></Link>
-        <Link to="/events" style={{textDecoration:"none"}}><h2>EVENTS</h2></Link>
+        <Link to="/artists" style={{textDecoration:"none"}}><h2 className="navlink">ARTISTS</h2></Link>
+        <Link to="/explore" style={{textDecoration:"none"}}><h2 className="navlink">EXPLORE</h2></Link>
+        <Link to="/events" style={{textDecoration:"none"}}><h2 className="navlink">EVENTS</h2></Link>
         {/* <Link to="/shop" style={{textDecoration:"none"}} ><h2>STORE</h2></Link>
        */}
       </Row>

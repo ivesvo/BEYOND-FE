@@ -9,10 +9,10 @@ const Footer = () => {
             <div className="col-md-10">
                 <div>
                     <div style={{ fontWeight: "bolder" }}>
-                        <h3>© 2020 BEYOND</h3>
+                        <h3 className="footertext" >© 2020 BEYOND</h3>
                     </div>
                     <div>
-                        <h3>WE ONLY RELEASE MUSIC WE LIKE, DESPITE GENRE OR SOUND.</h3>
+                        <h3 className="footertext">WE ONLY RELEASE MUSIC WE LIKE, DESPITE GENRE OR SOUND.</h3>
                     </div>
                 </div>
 

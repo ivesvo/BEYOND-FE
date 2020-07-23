@@ -115,7 +115,7 @@ const Artist = () => {
                         {alphabet.map((item => <Row>{item.map(z=>
                         <Col>
                         <section id={z}>
-                        <h1 style={{color:"#404040", fontSize:"100px"}}>{z}</h1>
+                        <h1 style={{color:"#404040"}} className="alphabet">{z}</h1>
                             
                         </section>
                         

@@ -7,8 +7,8 @@ const GenresDetail = (props) => {
     let history = useHistory()
 
     useEffect(() => {
-            axios.get(`${process.env.APP_URL}/artists/genres/${props.genre.code}`).then((res) => {
-                console.log("artistList", res.data)
+            axios.get(`https://beyond-be.herokuapp.com/artists/genres/${props.genre.code}`).then((res) => {
+                console.log("artistList", res.data.data)
                 setArtistList(res.data.data)
             })
     },[props.genre])
@@ -18,13 +18,13 @@ const GenresDetail = (props) => {
             {
                 props.genre ?
                     <div>
-                        <h1 className="times breadcrumbs">{props.genre.description}</h1>
+                        <h1 className="times breadcrumbs artist-detail">{props.genre.description}</h1>
                     </div>
 
                     : <div></div>
             }
                      <div className="tinytext" style={{color:"white", paddingTop:"30px",}}>RELATED ARTISTS</div>
-                     <h1>{artistList && artistList.map(item=><div onClick={()=>history.push({pathname:`/artists/${item.title}`})}>{item.title}</div>)}</h1> 
+                     <h1>{artistList && artistList && artistList.map(item=><div className=""onClick={()=>history.push({pathname:`/artists/${item.title}`})}>{item.title}</div>)}</h1> 
 
 
         </div>

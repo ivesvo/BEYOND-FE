@@ -43,9 +43,11 @@ const Genres = () => {
                 </Row>
 
                 <Row>
-                    <Col xs={12} md={2}>
+                    
+                    <Col xs={12} md={3}>
                         {genres.map(element =><h4 onClick={() => setGenre(element)} style={{ color: "white", marginBottom:"20px"}} className="artist-title-list">{element.genre.toUpperCase()}</h4>)}
                     </Col>
+
                     <Col md={1}></Col>
                     <Col md={8} xs={12}>
                         {genre ? <GenresDetail genre={genre} /> : <></>}

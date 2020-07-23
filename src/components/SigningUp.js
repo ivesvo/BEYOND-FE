@@ -18,6 +18,9 @@ export default function SigningUp() {
         await axios.post(`${process.env.REACT_APP_URL}/users`,{
             email: email, password: password, name:name
         })
+          alert("USER CREATED")
+    
+        
     } 
     
 
@@ -26,15 +29,12 @@ export default function SigningUp() {
         <div className="signing-up">
 
             <div>
-                {/* <Row>
-                   If not you, then who?
-                </Row> */}
                 <Row className="email">
                    
                     <Col md={10} xs={2}>
-                        <div className="d-flex align-items-center">
+                        <div className="d-flex align-items-baseline">
                         If not you, then
-                        
+                    
                         <Form.Group controlId="formBasicPassword">
                               
                               <input
@@ -95,7 +95,7 @@ export default function SigningUp() {
                        
                     </Col>
                     <Col md={2} xs={3} className="d-flex justify-content-end">
-                        <button className="btn sharp" style={{ fontFamily: "TimesNow", fontSize: "50px" }} type="submit" onClick={createUser}>SIGN UP NOW</button>
+                        <button className="btn sharp 1" style={{ fontFamily: "TimesNow", fontSize: "50px" }} type="submit" onClick={createUser}>SIGN UP NOW</button>
                     </Col>
 
 
