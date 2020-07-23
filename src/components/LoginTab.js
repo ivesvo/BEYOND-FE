@@ -14,7 +14,7 @@ export default function LoginTab() {
 
     const loginABC = async (e) => {
         e.preventDefault();
-        const res = await axios.post("http://localhost:5000/auth/login", { email: userEmail, password: userPassword }, {
+        const res = await axios.post(`${process.env.REACT_APP_URL}/auth/login`, { email: userEmail, password: userPassword }, {
             method: "POST"
         });
         const { user, token } = res.data.data;
@@ -32,7 +32,7 @@ export default function LoginTab() {
     const loginFacebook = async (data) => {
         if (data && data.accessToken) {
             console.log(data.accessToken)
-            const res = await fetch(`http://localhost:5000/auth/login/facebook?token=${data.accessToken}`)
+            const res = await fetch(`${process.env.REACT_APP_URL}/auth/login/facebook?token=${data.accessToken}`)
             if (res.ok) {
                 const dt = await res.json()
                 console.log("dt is", dt)

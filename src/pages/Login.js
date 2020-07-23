@@ -16,7 +16,7 @@ const User = () => {
 
    
     const logout = async () =>{
-        const res = await fetch(`http://localhost:5000/auth/logout`,{
+        const res = await fetch(`${process.env.REACT_APP_URL}/auth/logout`,{
             headers :{
                 authorization: `Bearer ${token}`,
             }

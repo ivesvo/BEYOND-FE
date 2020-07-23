@@ -19,7 +19,7 @@ export default function Events() {
 
 
     async function fetchData(q, pageNum) {
-        axios.get(`http://localhost:5000/events/?${q}&page=${pageNum}`).then((res) => {
+        axios.get(`${process.env.REACT_APP_URL}/?${q}&page=${pageNum}`).then((res) => {
             console.log("events data", res.data.data)
             setEvents(res.data.data)
             dispatch({ type: "LOADED" })
@@ -31,7 +31,7 @@ export default function Events() {
         if (events.length === 0) {
             fetchData(q, pageNum)
 
-            axios.get('http://localhost:5000/city').then((res) => {
+            axios.get(`${process.env.REACT_APP_URL}/city`).then((res) => {
                 // console.log("city data", res.data.data)
                 // console.log("test", res.data.data[0].city)
                 console.log(pageNum)

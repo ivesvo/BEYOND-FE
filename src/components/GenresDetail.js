@@ -7,7 +7,7 @@ const GenresDetail = (props) => {
     let history = useHistory()
 
     useEffect(() => {
-            axios.get(`http://localhost:5000/artists/genres/${props.genre.code}`).then((res) => {
+            axios.get(`${process.env.APP_URL}/artists/genres/${props.genre.code}`).then((res) => {
                 console.log("artistList", res.data)
                 setArtistList(res.data.data)
             })

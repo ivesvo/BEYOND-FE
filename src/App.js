@@ -21,7 +21,7 @@ function App() {
     const token = localStorage.getItem("token")
     if (!token) return
 
-    const res = await fetch("http://localhost:5000/users/me", {
+    const res = await fetch(`${process.env.REACT_APP_URL}/users/me`, {
       headers: {
         authorization: `Bearer ${token}`,
         "Content-Type": "application/json"

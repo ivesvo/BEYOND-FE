@@ -8,8 +8,8 @@ import axios from 'axios'
 const Cart = () => {
     const dispatch = useDispatch()
     const cart = useSelector(s => s.cartReducer.cart)
-    const vv = useSelector(s => s.cartReducer)
-    console.log(vv)
+    // const vv = useSelector(s => s.cartReducer)
+    // console.log(vv)
     let history = useHistory()
 
     useEffect(() => {
@@ -18,7 +18,7 @@ const Cart = () => {
 
     const checkCart = async () => {
         const token = localStorage.getItem("token")
-        const res = await axios.get("http://localhost:5000/cart", {
+        const res = await axios.get(`${process.env.REACT_APP_URL}/cart`, {
             headers: {
                 authorization: `Bearer ${token}`
             }
@@ -33,9 +33,13 @@ const Cart = () => {
             
             <div className="artistpage body">
 
-                {/* {cart
-                        ? cart.event.map(item => <h1>{item.event.title} / {item.count} tickets</h1>)
-                        : <h1>Nothing in your cart right now</h1>} */}
+                {cart
+                        ? cart.map(x=> 
+                        <div>
+                            <h2>{x.event.title}</h2>
+                            <h2>{x.count} ticket(s)</h2>
+                        </div>)
+                        : <h1>Nothing in your cart right now</h1>}
 
 
                 <button className="btn sharp">FINISH PURCHASE</button>

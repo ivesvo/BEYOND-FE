@@ -49,7 +49,7 @@ const NewEvent = () => {
             minimumAge
         };
 
-        const newEvent = await fetch("http://localhost:5000/events", {
+        const newEvent = await fetch(`${process.env.REACT_APP_URL}/events`, {
             method: "POST",
             headers: {
                 authorization: `Bearer ${token}`,
@@ -68,7 +68,7 @@ const NewEvent = () => {
 
     return (
         <div>
-            <Navigationbar />
+           
             <div className="artistpage body">
                 <Row><h1 className="big" style={{ color: "#404040"}}>SUBMIT AN EVENT</h1></Row>
 

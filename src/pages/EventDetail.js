@@ -24,7 +24,7 @@ const EventDetail = (props) => {
     useEffect(() => {
         dispatch({ type: "LOADING" })
         console.log("id is", eventId)
-        axios.get(`http://localhost:5000/events/${eventId}`).then((res) => {
+        axios.get(`${process.env.REACT_APP_URL}/${eventId}`).then((res) => {
             console.log("single event data is", res.data)
             setEventDetail(res.data.data)
             dispatch({ type: "LOADED" })
@@ -86,11 +86,11 @@ const EventDetail = (props) => {
                             <h3>{ticket}</h3>
                             <button className="btn sharp" onClick={() => addTicket()}>+</button>
 
-                            <button className="btn sharp" onClick={() => dispatch({ type: "CART_UPDATE_FROM_SERVER", payload: { event: eventDetail, count: ticket } })}>Add To Cart</button>
+                            <button className="btn sharp" onClick={() => dispatch({ type: "CART_UPDATE_FROM_LOCAL", payload: { event: eventDetail, count: ticket } })}>Add To Cart</button>
                         </div>
                         <h3> Subtotal:</h3>
 
-                        //Phai post api len server de update card
+                       
 
                     </div>
 

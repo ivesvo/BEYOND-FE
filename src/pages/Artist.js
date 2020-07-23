@@ -56,7 +56,7 @@ const Artist = () => {
   
     useEffect(() => {
         if (artists.length === 0) {
-            axios.get("http://localhost:5000/artists").then((res) => {
+            axios.get(`${process.env.REACT_APP_URL}/artists`).then((res) => {
                 console.log(res.data)
                 setArtists(res.data.data)
                 dispatch({ type: "LOADED" })
