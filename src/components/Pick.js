@@ -13,7 +13,7 @@ const Pick = () => {
                     <img srcset="https://d2kq0urxkarztv.cloudfront.net/5a8ad8445e30ce008f8e9659/1358968/upload-4cf789b4-9285-4204-bdde-97b81830be27.jpg?w=683&amp;e=webp 2x, https://d2kq0urxkarztv.cloudfront.net/5a8ad8445e30ce008f8e9659/1358968/upload-4cf789b4-9285-4204-bdde-97b81830be27.jpg?w=1024&amp;e=webp 3x" src="https://d2kq0urxkarztv.cloudfront.net/5a8ad8445e30ce008f8e9659/1358968/upload-4cf789b4-9285-4204-bdde-97b81830be27.jpg?w=683&amp;e=webp" class="viewable" />
 
                     <div className="d-flex justify-content-between radiocard">
-                        {/* <i style={{ color: "tomato", marginTop: "5px" }} class="fa fa-play" aria-hidden="true"></i> */}
+                      <div>HELLO</div>
                         <ReactAudioPlayer
                             src="https://soundcloud.com/larr-a2/laudaitinhai-baile"
                             autoPlay
