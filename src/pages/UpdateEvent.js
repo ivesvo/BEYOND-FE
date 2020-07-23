@@ -52,7 +52,7 @@ const UpdateEvent = (props) => {
             minimumAge
         };
 
-        const updatedEvent = await fetch(`${process.env.REACT_APP_URL}events/${eventId}`, {
+        const updatedEvent = await fetch(`${process.env.REACT_APP_URL}/events/${eventId}`, {
             method: "PUT",
             headers: {
                 authorization: `Bearer ${token}`,

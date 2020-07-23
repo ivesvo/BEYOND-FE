@@ -14,7 +14,7 @@ export default function LoginTab() {
 
     const loginABC = async (e) => {
         e.preventDefault();
-        const res = await axios.post(`${process.env.REACT_APP_URL}auth/login`, { email: userEmail, password: userPassword }, {
+        const res = await axios.post(`${process.env.REACT_APP_URL}//auth/login`, { email: userEmail, password: userPassword }, {
             method: "POST"
         });
         const { user, token } = res.data.data;
@@ -32,7 +32,7 @@ export default function LoginTab() {
     const loginFacebook = async (data) => {
         if (data && data.accessToken) {
             console.log(data.accessToken)
-            const res = await fetch(`${process.env.REACT_APP_URL}auth/login/facebook?token=${data.accessToken}`)
+            const res = await fetch(`${process.env.REACT_APP_URL}/auth/login/facebook?token=${data.accessToken}`)
             if (res.ok) {
                 const dt = await res.json()
                 console.log("dt is", dt)
@@ -67,7 +67,7 @@ export default function LoginTab() {
                                 col="8"
                                 className="searchbar"
                                 placeholder="Enter email"
-                                onChange={(e) => handleEmailChange(e)} />
+                                onChange={(e) => setUserEmail(e.target.value)} />
 
                             <Form.Text className="text-muted">
                                 We'll never share your email with anyone else.
@@ -84,7 +84,7 @@ export default function LoginTab() {
                                 col="8"
                                 type="password"
                                 placeholder="Password"
-                                onChange={(e) => handlePasswordChange(e)} />
+                                onChange={(e) => setUserPassword(e.target.value)} />
                         </Form.Group>
 
                     </div>
@@ -94,7 +94,7 @@ export default function LoginTab() {
 
                 <div>
                     <button className="btn sharp" >Sign In</button>
-  <FacebookLogin
+                    <FacebookLogin
                         
                         appId="274983090404652"
                         autoLoad={false}

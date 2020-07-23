@@ -15,7 +15,7 @@ const Genres = () => {
 
     useEffect(() => {
         if (genres.length == 0) {
-            axios.get(`${process.env.REACT_APP_URL}genres`).then((res) => {
+            axios.get(`${process.env.REACT_APP_URL}/genres`).then((res) => {
                 console.log("genres", res.data.data)
                 setGenres(res.data.data)
             }, [])
