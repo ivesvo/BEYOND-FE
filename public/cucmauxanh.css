@@ -42,8 +42,13 @@ Link:hover{
   outline: none;
 }
 
-.btn.sharp:hover{
+.btn1.sharp:hover{
   color: tomato;
+  background-color: white!
+}
+
+.btn.sharp:hover{
+  color:teal;
   background-color: white!important;
 }
 
@@ -61,7 +66,7 @@ Link:hover{
 .footer{
   display: flex;
   align-items: flex-end;
-  padding: 0 45px;
+  padding: 20 45px;
   height:75%;
   background-color: darkgray;
   
@@ -161,11 +166,6 @@ input{
 textarea{
   color: white;
 }
-h1{
-  color: white;
-  font-size: 20px;
-}
-
 a .nav-item .nav-link{
   color: white;
 }
@@ -186,10 +186,22 @@ font-weight: bolder;
 }
 
 .searchbar{
-  padding: 8px;
+  padding: 12px;
   background-color:rgba(0, 0, 0, 0);
-  border: 1px solid white;
+  border: none;
+  border-bottom: 1px solid white !important;
+  min-width:50vw;
+  
+}
 
+.searchbar:focus{
+  padding: 12px;
+  background-color:rgba(0, 0, 0, 0);
+  border: none;
+  border-bottom: 1px solid teal !important;
+  min-width: 50vw;
+  outline: none;
+  
 }
 
 .emailbar{
@@ -214,15 +226,41 @@ font-weight: bolder;
 position: absolute;
 right: 40px;
 }
-
+@media only screen and (max-width: 600px) {
+  .navlink{
+    font-size: 20px;
+    font-weight: bolder;
+  
+ }
+}
 
 /* 
 ARTISTS PAGE */
 .artist-title-list:hover{
   background-color: teal;
   text-decoration: none;
-  
 }
+
+@media only screen and (max-width: 600px) {
+  .artist-title-list{
+    font-size: 15px;
+ }
+}
+
+.alphabet{
+  color: darkgray;
+  font-size: 120px;
+}
+
+@media only screen and (max-width: 600px) {
+  .alphabet{
+    font-size: 75px;
+ }}
+ @media only screen and (max-width: 600px) {
+  .footertext{
+    font-size: 20px;
+ }}
+
 
 .artistpage{
   background-color: black;
@@ -244,11 +282,16 @@ ARTISTS PAGE */
 .artist-detail{
   margin-top:0px;
   background-color: black;
-  padding: 40px;
+  padding: 30px;
   color: white;
   font-family: 'Times Now';
-  font-size: 30px;
+  font-size: 35px;
 }
+
+  @media only screen and (max-width: 600px) {
+    .artist-detail{
+      font-size: 25px;
+   }}
 
 .artist-title{
   color: white;
@@ -360,10 +403,18 @@ a:hover{
 
 .radiocard{
   background-color: white;
-  width: 21.3rem;
+  width: 25em;
   height:30px;
   padding: 0 10px;
 }
 .radioinfo{
   padding-top: 10px;
 }
+
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color:white;
+  opacity: 1; /* Firefox */
+}
+
+
