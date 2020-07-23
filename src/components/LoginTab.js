@@ -14,7 +14,7 @@ export default function LoginTab() {
 
     const loginABC = async (e) => {
         e.preventDefault();
-        const res = await axios.post(`${process.env.REACT_APP_URL}//auth/login`, { email: userEmail, password: userPassword }, {
+        const res = await axios.post(`${process.env.REACT_APP_URL}/sauth/login`, { email: userEmail, password: userPassword }, {
             method: "POST"
         });
         const { user, token } = res.data.data;
@@ -45,14 +45,6 @@ export default function LoginTab() {
         }
     }
 
-    const handleEmailChange = (e) => {
-        e.preventDefault()
-        setUserEmail(e.target.value)
-    }
-    const handlePasswordChange = (e) => {
-        e.preventDefault()
-        setUserPassword(e.target.value)
-    }
     return (
         <div>
 
