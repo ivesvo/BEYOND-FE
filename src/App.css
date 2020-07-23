@@ -1,0 +1,369 @@
+.App {
+  background-color: black;
+  overflow: hidden;
+  color: white;
+}
+
+Link{
+  text-decoration: none;
+}
+
+Link:hover{
+  text-decoration: none;
+}
+
+.user-login{
+  padding: 20px;
+  padding-bottom: 5px;
+  display: flex;
+  justify-content: flex-end;
+
+}
+
+.breadcrumbs{
+  display: flex;
+  justify-content: space-between;
+}
+
+.signing-up{
+  padding: 45px; 
+  height: 26%;
+  background-color: tomato;
+  color: white;
+}
+
+.btn.sharp{
+  border-radius:0;
+  text-transform: none;
+  color: white;
+}
+
+.btn:focus{
+  outline: none;
+}
+
+.btn.sharp:hover{
+  color: tomato;
+  background-color: white!important;
+}
+
+.search{
+  border: none;
+}
+
+.cucmauxanh {
+  height: 9%;
+  background-color: teal;
+}
+.lastpage {
+  height: 90vh ;
+}
+.footer{
+  display: flex;
+  align-items: flex-end;
+  padding: 0 45px;
+  height:75%;
+  background-color: darkgray;
+  
+  color: white;
+}
+.blank{
+  height:60vh;
+}
+
+.btn{
+  background-color: transparent !important;
+  border: 2px solid white !important;
+  font-size: 20px !important;
+  color: white;
+  padding: 10px 10px !important;
+}
+
+
+
+.shopnow{
+  display:flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-image:url(./imgs/landingpage.gif);
+}
+.shop{
+  background-image: url(https://gfycat.com/allweightycarp);
+  background-size: 100vw;
+
+}
+
+.aothun {
+  max-width: 90vw;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+}
+
+.poster{
+  padding:45px;
+  max-width: 100vw;
+  max-height: 100vh;
+  width: auto;
+  height: auto;
+}
+
+.text-field{
+  color: white;
+}
+
+
+.ivy{
+  padding-top:200px;
+  background-image: url(https://freight.cargo.site/t/original/i/2e3ac4513c1dbf52495bfe2652850c60062a9df57792fe0fa1312ff9a9219bce/VOQUOXY_0009_Layer-4.jpg);
+  background-size: 100vw;
+  height:100vh;
+}
+
+.TextField{
+  color: white
+}
+/* 
+LOGIN PAGE  */
+
+/* .loginwindow{
+  width: 30rem;
+  height: 30rem;
+  color: white;
+  padding: 10px;
+} */
+
+.loginpage{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 45px;
+  flex-wrap: wrap
+}
+
+
+.nav-tabs{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-bottom: none !important;
+}
+
+.MuiInputBase-input{
+  color: white!important;
+}
+
+input{
+  color: white;
+}
+textarea{
+  color: white;
+}
+h1{
+  color: white;
+  font-size: 20px;
+}
+
+a .nav-item .nav-link{
+  color: white;
+}
+
+.tinytext{
+  font-family: 'Favorit';
+  font-size: 12px;
+  color: white
+}
+
+/* NAV BAR */
+
+.fixed-top{
+mix-blend-mode: difference;
+font-family: 'Favorit';
+font-weight: bolder;
+
+}
+
+.searchbar{
+  padding: 8px;
+  background-color:rgba(0, 0, 0, 0);
+  border: 1px solid white;
+
+}
+
+.emailbar{
+  padding: 8px;
+  background-color:rgba(0, 0, 0, 0);
+  border: none
+}
+.emailbar:focus{
+  padding: 8px;
+  background-color:rgba(0, 0, 0, 0);
+  border: none;
+  outline: none;
+}
+.email{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap
+}
+
+
+.search-icon {
+position: absolute;
+right: 40px;
+}
+
+
+/* 
+ARTISTS PAGE */
+.artist-title-list:hover{
+  background-color: teal;
+  text-decoration: none;
+  
+}
+
+.artistpage{
+  background-color: black;
+  min-height: 100vh;
+  padding-top: 200px;
+  padding-bottom: 50px;
+  margin: 0 45px;
+}
+
+.eventpage{
+  background-color: black;
+  min-height: 100vh;
+  padding-bottom: 100px;
+  padding-top: 200px;
+  margin: 0 45px;
+
+}
+
+.artist-detail{
+  margin-top:0px;
+  background-color: black;
+  padding: 40px;
+  color: white;
+  font-family: 'Times Now';
+  font-size: 30px;
+}
+
+.artist-title{
+  color: white;
+  position: absolute;
+  bottom: 220px;
+  left: 40px;
+  font-family: 'Favorit';
+}
+a{
+  color: white !important;
+}
+a:hover{
+  color: white;
+}
+.fill {
+  object-fit: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 80vh;
+  width: 100vw;
+}
+
+.fill img {
+  flex-shrink: 0;
+  
+}
+
+/* ICON */
+
+.fal{
+  color: white;
+  margin-right: 5px;
+}
+
+.fal:focus{
+  outline: none;
+}
+
+.body{
+  font-family: 'Favorit';
+}
+/*GENRE*/
+
+.times{
+  font-family: 'Times Now';
+}
+
+
+/*EVENT-PAGE*/
+.filtered-city{
+
+  color: white;
+  height: 50px;
+  width: 100%;
+  margin-bottom: 50px;
+  padding-left: 15px;
+
+}
+
+.city {
+  padding: 10px
+}
+.city:hover{
+  background-color: teal;
+}
+
+.poster-img{
+  
+  display:flex;
+  justify-content: center;
+  padding-top: 250px;
+}
+
+
+.lineup{
+  display:column;
+  text-transform: capitalize;
+}
+
+/*loading*/
+.loading{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.big{
+  font-size: 120px;
+}
+
+
+
+.tab:focus{
+  background: none;
+}
+
+.nav-link{  
+  border: none;
+}
+
+.nav-link.active{
+  border:none;
+  background-color: none;
+  border-bottom: 1px solid white;
+  
+}
+
+.radiocard{
+  background-color: white;
+  width: 21.3rem;
+  height:30px;
+  padding: 0 10px;
+}
+.radioinfo{
+  padding-top: 10px;
+}

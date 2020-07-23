@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'TimesNow';
+  src: local('TimesNow'), url(./fonts/TimesNowLight.otf) format('otf');
+}
+
+@font-face {
+  font-family: 'Favorit';
+  src: local('Favorite'), url(./fonts/FavoritTrialStd-Light.woff2) format('woff');
+} 
+body {
+  margin: 0;
+  font-family: '-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue'',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
