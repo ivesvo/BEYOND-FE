@@ -19,7 +19,7 @@ export default function Events() {
 
 
     async function fetchData(q, pageNum) {
-        axios.get(`${process.env.REACT_APP_URL}/events/?${q}&page=${pageNum}`).then((res) => {
+        axios.get(`${process.env.REACT_APP_URL}events/?${q}&page=${pageNum}`).then((res) => {
             console.log("events data", res.data.data)
             setEvents(res.data.data)
             dispatch({ type: "LOADED" })
@@ -31,7 +31,7 @@ export default function Events() {
         if (events.length === 0) {
             fetchData(q, pageNum)
 
-            axios.get(`${process.env.REACT_APP_URL}/city`).then((res) => {
+            axios.get(`${process.env.REACT_APP_URL}city`).then((res) => {
     
                 console.log(pageNum)
                 setCities(res.data.data)
